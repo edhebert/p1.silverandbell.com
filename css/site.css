@@ -1,0 +1,79 @@
+/* 
+ * CSCIE-15 Fall 2013
+ * Project 1
+ * Ed Hebert
+ * ehebert@fas.harvard.edu 
+ */
+
+a, a:visited {
+    color: #ffd9aa;
+    text-decoration: none;
+    /* aniate text color change on hover */
+    -webkit-transition: color .25s linear;
+    -moz-transition: color .25s linear;
+    transition: color .25s linear;
+}
+
+.links a {
+    color: #fff;
+    margin: 0 2px;
+}
+
+a:hover, .links a:hover  {
+    color: #fcead4;
+}
+
+body {
+    background: #83cee5;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 7% 10%;
+}
+
+/* deals with vertical alignment issues with CSS3 columns */
+p {
+    display: inline-block;
+}
+
+/* column distribution for the content */
+.cols {
+    column-count: 3;
+    column-gap: 40px; 
+    column-rule-width: 1px;
+    column-rule-style: solid;
+    column-rule-color: #fff;
+
+    -moz-column-count: 3;
+    -moz-column-gap: 40px; 
+    -moz-column-rule-width: 1px;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-color: #fff;
+
+    -webkit-column-count: 3;
+    -webkit-column-gap: 40px; 
+    -webkit-column-rule-width: 1px;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-color: #fff;
+} 
+
+/* change column count for smaller-width devices */
+
+@media (max-width: 767px) {
+    .cols {
+        column-count: 2;
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+    }
+}
+
+/* phones */
+@media (max-width: 480px) {
+    .cols {
+        column-count: 1;
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+    }
+}
+
